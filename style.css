@@ -1,0 +1,172 @@
+.sky{
+    height:100%;
+    width:100%;
+    background: rgb(129,186,221);
+    background: -moz-linear-gradient(top, rgb(16, 21, 24) 0%, rgb(64, 48, 88) 100%);
+    background: -webkit-linear-gradient(top, rgb(17, 24, 29) 0%,rgb(55, 42, 77) 100%);
+    background: linear-gradient(to bottom, rgb(15, 22, 26) 0%,rgb(62, 47, 87) 100%);
+    overflow: hidden;
+}
+.blockParent{
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+}
+.blockParent div{
+    border-radius:5px;
+    height:20px;
+    width:20px
+}
+
+.fallingIce{
+    position: absolute;
+    border-radius:2px;
+    height:10px;
+    width:10px;
+    text-align:center;
+    font-size: 10px;
+    font-weight: bolder;
+    transform: rotate(-90deg);
+
+}
+
+.innerBlock{
+    position:relative;
+    top:-5px;
+}
+
+.slideIce{
+    position: absolute;
+    border-radius:2px;
+    height:10px;
+    width:10px;
+    text-align:center;
+    font-weight: bolder;
+    transform: translate(-30px);
+
+}
+
+.slideIce2{
+    position: absolute;
+    border-radius:2px;
+    height:10px;
+    width:10px;
+    text-align:center;
+    font-weight: bolder;
+    animation: jumper .3s ease-out both;
+    
+
+}
+
+.smallIce{
+
+    position: absolute;
+
+   height:5px ! important;
+    width:5px ! important;
+    border-radius: 1px ! important;
+
+}
+.smallIceStill{
+
+    position: absolute;
+
+   height:5px ! important;
+    width:5px ! important;
+    border-radius: 1px ! important;
+    animation: smalljumper .2s both
+
+}
+
+@keyframes smalljumper {
+    0%{transform: translate(0px, 0px)}
+    50%{transform: translate(0px, -2px)
+    }
+    100%{transform: translate(0px, 0px)}
+    
+}
+
+@keyframes jumper {
+    0%{transform: translate(0px, 0px)}
+    50%{transform: translate(20px, -40px)
+    }
+    100%{transform: translate(30px, 0px)}
+    
+}
+@keyframes slideover {
+    0%{transform: translate(0px, 100px)}
+    
+    100%{transform: translate(0px, 0px)}
+    
+}
+
+
+.stripe{
+width:100%;
+height:100%;
+opacity:.05;
+animation:slideover .5s both
+
+
+
+}
+
+body{
+    overflow: hidden;
+}
+
+.screen{
+
+   animation:slideover .5s both;
+   height:80%;
+   width:80%;
+   margin:10%;
+   margin-top:5%;
+   background-color:white;
+   border-radius:5px;
+   position:absolute;
+   z-index:999
+}
+.title{
+   animation:slideover .5s both;
+   height:20%;
+   width:80%;
+   margin:10%;
+   margin-top:20px;
+   margin-bottom:20px;
+
+   border-radius:5px;
+   border:1px black solid
+
+
+}
+.information{
+   animation:slideover .5s both;
+   height:60%;
+   width:80%;
+   margin:10%;
+   margin-top:20px;
+   margin-bottom:20px;
+   border:1px black solid
+
+
+}
+.close{
+  position:absolute;
+  height:50px;
+  width:50px;
+  font-size: 40px;
+  font-weight: bolder;
+  text-align:center;
+   border-radius:5px;
+   top:10px;
+   left:90%;
+
+}
+.close:hover{
+    background-color: black;
+    color:white;
+}
+.invisibleP{
+    display:none;
+}
