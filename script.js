@@ -444,7 +444,9 @@ var dropBoxes = function(number){
   for(i=0; i<length; i++){
     let block=$("<div>");
     block.addClass("fallingIce");
-    block.attr('number',number);
+    if(title[i]!==' '){
+    block.attr('number',number)
+    };
     block.css("top", -10-(10*i))
     block.css('left', randomLeft)
     if(characters.includes( title[i])){
